@@ -29,7 +29,7 @@ import { NoteEnum } from "../Common/DataObjects/Pitch";
  * After the constructor, use load() and render() to load and render a MusicXML file.
  */
 export class OpenSheetMusicDisplay {
-    protected version: string = "1.7.5-dev"; // getter: this.Version
+    protected version: string = "1.7.6-release"; // getter: this.Version
     // at release, bump version and change to -release, afterwards to -dev again
 
     /**
@@ -605,8 +605,8 @@ export class OpenSheetMusicDisplay {
         if (options.stretchLastSystemLine !== undefined) {
             this.rules.StretchLastSystemLine = options.stretchLastSystemLine;
         }
-        if (options.autoGenerateMutipleRestMeasuresFromRestMeasures !== undefined) {
-            this.rules.AutoGenerateMutipleRestMeasuresFromRestMeasures = options.autoGenerateMutipleRestMeasuresFromRestMeasures;
+        if (options.autoGenerateMultipleRestMeasuresFromRestMeasures !== undefined) {
+            this.rules.AutoGenerateMultipleRestMeasuresFromRestMeasures = options.autoGenerateMultipleRestMeasuresFromRestMeasures;
         }
         if (options.cursorsOptions !== undefined) {
             this.cursorsOptions = options.cursorsOptions;

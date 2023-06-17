@@ -147,7 +147,8 @@ export class EngravingRules {
     public MeasureNumberLabelXOffset: number;
     /** Whether tuplets should display ratio (3:2 instead of 3 for triplet). Default false. */
     public TupletsRatioed: boolean;
-    /** Whether all tuplets should be bracketed (e.g. |--5--| instead of 5). Default false.
+    /** Whether tuplets (except triplets) should be bracketed (e.g. |--5--| instead of 5). Default false.
+     * Note that this doesn't affect triplets (|--3--|), which have their own setting TripletsBracketed.
      * If false, only tuplets given as bracketed in XML (bracket="yes") will be bracketed.
      * (If not given in XML, bracketing is implementation-dependent according to standard)
      */
@@ -344,7 +345,7 @@ export class EngravingRules {
     public RenderLyrics: boolean;
     public RenderChordSymbols: boolean;
     public RenderMultipleRestMeasures: boolean;
-    public AutoGenerateMutipleRestMeasuresFromRestMeasures: boolean;
+    public AutoGenerateMultipleRestMeasuresFromRestMeasures: boolean;
     public RenderRehearsalMarks: boolean;
     public RenderClefsAtBeginningOfStaffline: boolean;
     public RenderKeySignatures: boolean;
@@ -738,7 +739,7 @@ export class EngravingRules {
         this.RenderLyrics = true;
         this.RenderChordSymbols = true;
         this.RenderMultipleRestMeasures = true;
-        this.AutoGenerateMutipleRestMeasuresFromRestMeasures = true;
+        this.AutoGenerateMultipleRestMeasuresFromRestMeasures = true;
         this.RenderRehearsalMarks = true;
         this.RenderClefsAtBeginningOfStaffline = true;
         this.RenderKeySignatures = true;
